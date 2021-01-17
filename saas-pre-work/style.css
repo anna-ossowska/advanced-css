@@ -1,0 +1,115 @@
+/* * {
+  margin: 0;
+  padding: 0
+}
+
+$color-primary: #f9ed69; // yellow
+$color-secondary: #f08a5d;
+$width-button: 150px;
+
+nav {
+  margin: 30px;
+  background-color: $color-primary;
+  
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+.navigation {
+  list-style: none;
+  float: left;
+  
+  li {
+    display: inline-block;
+    margin-left: 30px;
+
+  
+    &:first-child {
+      margin: 0;
+    }
+    
+    a:link {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.buttons {
+  float: right;
+}
+
+.btn-main:link,
+.btn-hot:link {
+    padding: 10px;
+  display:inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  width: $width-button;
+}
+
+.btn-main {
+  &:link {
+    background-color: #777;
+  }
+  
+  &:hover {
+    background-color: lighten(#777, 15%);
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  margin: 30px;
+  background-color: #f9ed69;
+}
+nav::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.navigation {
+  list-style: none;
+  float: left;
+}
+.navigation li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.navigation li:first-child {
+  margin: 0;
+}
+.navigation li a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.buttons {
+  float: right;
+}
+
+.btn-main:link,
+.btn-hot:link {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  width: 150px;
+}
+
+.btn-main:link {
+  background-color: #777;
+}
+.btn-main:hover {
+  background-color: #9d9d9d;
+}
