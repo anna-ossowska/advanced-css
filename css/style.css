@@ -139,7 +139,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* In reatltion to the link state, not  hover state */
+/* In reatltion to the link state, not the hover state */
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
