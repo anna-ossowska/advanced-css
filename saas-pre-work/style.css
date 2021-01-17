@@ -1,21 +1,36 @@
-/* * {
+* {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
-$color-primary: #f9ed69; // yellow
+/* $color-primary: #f9ed69; // yellow
 $color-secondary: #f08a5d;
+
 $width-button: 150px;
 
-nav {
-  margin: 30px;
-  background-color: $color-primary;
-  
+@mixin clearfix {
   &::after {
     content: '';
     clear: both;
     display: block;
   }
+}
+
+@mixin style-link-text($color) {
+  text-decoration: none;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@function divide($a, $b) {
+  @return $a / $b;
+}
+
+nav {
+  margin: divide(120, 2) * 1px;
+  background-color: $color-primary;
+  
+  @include clearfix;
 }
 
 .navigation {
@@ -32,24 +47,28 @@ nav {
     }
     
     a:link {
-      text-decoration: none;
-      text-transform: uppercase;
+      @include style-link-text(#777);
     }
   }
 }
+
 
 .buttons {
   float: right;
 }
 
-.btn-main:link,
-.btn-hot:link {
+%btn-placeholder {
   padding: 10px;
-  display: inline-block;
+  display:inline-block;
   text-align: center;
   border-radius: 100px;
-  text-decoration: none;
   width: $width-button;
+  @include style-link-text(#fff);
+}
+
+.btn-main:link,
+.btn-hot:link {
+  @extend %btn-placeholder;
 }
 
 .btn-main {
@@ -68,9 +87,10 @@ nav {
 }
 
 nav {
-  margin: 30px;
+  margin: 60px;
   background-color: #f9ed69;
 }
+
 nav::after {
   content: '';
   clear: both;
@@ -81,15 +101,19 @@ nav::after {
   list-style: none;
   float: left;
 }
+
 .navigation li {
   display: inline-block;
   margin-left: 30px;
 }
+
 .navigation li:first-child {
   margin: 0;
 }
+
 .navigation li a:link {
   text-decoration: none;
+  color: #777;
   text-transform: uppercase;
 }
 
@@ -103,13 +127,16 @@ nav::after {
   display: inline-block;
   text-align: center;
   border-radius: 100px;
-  text-decoration: none;
   width: 150px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .btn-main:link {
   background-color: #777;
 }
+
 .btn-main:hover {
   background-color: #9d9d9d;
 }
