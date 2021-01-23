@@ -1,8 +1,3 @@
-/* Animations can also happen on events, not only page load */
-/* .logo:hover {
-  animation: moveInRight 1s ease-out;
-} */
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -46,3 +41,8 @@
     transform: translateY(0);
   }
 }
+
+/* Animations can also happen on events, not only page load */
+/* .logo:hover {
+  animation: moveInRight 1s ease-out;
+} */
