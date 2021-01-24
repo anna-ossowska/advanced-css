@@ -2,7 +2,7 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
-  padding-bottom: 45rem;
+  padding-bottom: 52rem;
 }
 
 .section-features {
@@ -14,4 +14,11 @@
     ),
     url(../img/nat-4.jpg);
   height: 80vh;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  // selecting all direct children (rows)
+  & > * {
+    transform: skewY(7deg);
+  }
 }
