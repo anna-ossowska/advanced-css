@@ -1,0 +1,48 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  // height of the parent collapsed because we took its child elements of their natural flow by applying position: absolute
+  // we can fix it by setting the same height on both parent and children
+  height: 50rem;
+
+  &__side {
+    color: $color-white;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all 0.8s ease;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // hides the back side of the card;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+    }
+  }
+
+  // When we hover over the card, we want to transform two sides
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
