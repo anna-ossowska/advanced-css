@@ -5,10 +5,10 @@
   position: relative;
   // height of the parent collapsed because we took its child elements of their natural flow by applying position: absolute
   // we can fix it by setting the same height on both parent and children
-  height: 50rem;
+  height: 52rem;
 
   &__side {
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease;
     width: 100%;
     position: absolute;
@@ -98,6 +98,25 @@
         rgba($color-secondary-light, 0.85),
         rgba($color-secondary-dark, 0.85)
       );
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
     }
   }
 }
