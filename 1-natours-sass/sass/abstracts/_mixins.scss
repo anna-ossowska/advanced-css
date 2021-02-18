@@ -21,17 +21,25 @@ MEDIA QUERY MANAGER
 900px - 1200px    Tablet landscape
 1200 - 1800px     Is where our normal styles apply
 1800px +          Big desktop
-*/
 
-/*
+
 $breakpoints:
 - phone
 - tab-port
 - tab-land
 - big-desktop
-*/
 
-// 1em = 16px
+
+ORDER:
+1. Base + Typography
+2. General lyaout + grid
+3. Page layout
+4. Components
+
+
+1em = 16px
+
+*/
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
